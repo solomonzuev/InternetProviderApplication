@@ -1,0 +1,35 @@
+﻿<Page x:Class="InternetProviderApp.AdditionalServiceAddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternetProviderApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Title="AdditionalServiceAddEditPage" FontSize="16">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextWrapping="Wrap" Grid.Row="0">Название услуги</TextBlock>
+        <TextBlock TextWrapping="Wrap" Grid.Row="1">Цена за день (РУБ)</TextBlock>
+        <TextBlock TextWrapping="Wrap" Grid.Row="2">Описание услуги</TextBlock>
+
+        <TextBox Name="TextName" Grid.Column="1"></TextBox>
+        <TextBox Name="TextPricePerDay" Grid.Row="1" Grid.Column="1">0</TextBox>
+        <TextBox Name="TextDescription" Grid.Row="2" Grid.Column="1" Height="130" VerticalContentAlignment="Top" TextWrapping="Wrap"></TextBox>
+
+        <Button Name="BtnAddEdit" Grid.Row="3" Grid.ColumnSpan="2" Content="Редактировать" Click="BtnAddEdit_Click" />
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="InternetProviderApp.ClientAddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternetProviderApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Title="ClientAddEditPage" FontSize="16">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0">ФИО клиента</TextBlock>
+        <TextBlock Grid.Row="1">Адрес</TextBlock>
+        <TextBlock Grid.Row="2">Паспортные данные</TextBlock>
+        <TextBlock Grid.Row="3">Код подразделения</TextBlock>
+        <TextBlock Grid.Row="4">Дата рождения</TextBlock>
+        <TextBlock Grid.Row="5">Номер телефона</TextBlock>
+        <TextBlock Grid.Row="6">Эл. почта</TextBlock>
+
+        <TextBox Name="TextFullName" Grid.Row="0" Grid.Column="1"></TextBox>
+        <TextBox Name="TextHomeAddress" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox Name="TextPassportNumber" Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox Name="TextCodPodrazdeleniya" Grid.Row="3" Grid.Column="1"></TextBox>
+        <DatePicker Name="PickerDateOfBirth" Grid.Row="4" Grid.Column="1" 
+                    VerticalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10"/>
+        <TextBox Name="TextPhoneNumber" Grid.Row="5" Grid.Column="1"></TextBox>
+        <TextBox Name="TextEmail" Grid.Row="6" Grid.Column="1"></TextBox>
+
+        <Button Name="BtnAddEdit" Grid.Row="7" Grid.ColumnSpan="2" Content="Редактировать" Click="BtnAddEdit_Click" />
+    </Grid>
+</Page>
